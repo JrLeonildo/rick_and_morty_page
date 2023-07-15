@@ -10,7 +10,7 @@ body{
 header{
   border-bottom: solid #ffffff79 1px;
 }
-#background{
+#headerContainer{
   background-color: #000000;
   display: flex;
   justify-content: space-between;
@@ -29,6 +29,8 @@ nav div a{
   color: #fff;
   font-weight: bold;
 }
+
+/*loading*/
 .open{
   text-decoration: underline;
 }
@@ -133,15 +135,19 @@ nav div a{
   }
 }
 
-
+/*main*/
 #main{
   border-bottom: solid #ffffff79 1px;
 }
-#charactersContainer{
+
+#cardsContainer{
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+#charactersContainer h2{
+  color: #fff;
 }
 .CharactersCard{
   width: 250px;
