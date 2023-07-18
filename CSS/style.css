@@ -7,6 +7,8 @@
 body{
   background-color: #000000;
 }
+
+/*header*/
 header{
   border-bottom: solid #ffffff79 1px;
 }
@@ -17,6 +19,8 @@ header{
   align-items: center;
   padding:5px 30px;
 }
+
+/*navbar*/
 nav{
   display: flex;
 }
@@ -138,16 +142,21 @@ nav div a{
 /*main*/
 #main{
   border-bottom: solid #ffffff79 1px;
+  margin-bottom: 50px;
 }
 
+/*cards*/
 #cardsContainer{
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-#charactersContainer h2{
+.headerContainer h3{
   color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2.3em;
 }
 .CharactersCard{
   width: 250px;
@@ -163,9 +172,10 @@ nav div a{
 .imgContainer img{
   width: 200px;
 }
-.nameCharacterContainer h3{
+.nameCharacterContainer h2{
   color: #fff;
   text-align: center;
+  font-size: 1.2em;
 }
 .dataContainer{
   width: 90%;
@@ -178,5 +188,26 @@ nav div a{
 }
 .dataContainer ul li{
   color: #fff;
+}
 
+/*locations episodes*/
+#locationsListContainer, #episodesListContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.locationsList, .episodesList{
+  display: flex;
+  height: 50%;
+  justify-content: center;
+  border: 1px solid #ffffff7c;
+  margin: 0.5em 2em;
+}
+.locationsList  li, .episodesList li{
+  color: #ffffff;
+  margin: 0.5em 1em;
+}
+.locationsList li span, .episodesList li span{
+  font-size: 1.1em;
+  font-weight: bold;
 }

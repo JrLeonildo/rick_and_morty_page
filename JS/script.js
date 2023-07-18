@@ -3,7 +3,9 @@ const urlLocatios = "https://rickandmortyapi.com/api/location";
 const urlEpisodes = "https://rickandmortyapi.com/api/episode";
 const loadingPage = document.querySelector(".loader");
 const cardsContainer = document.querySelector("#cardsContainer");
-const headerCharactersContainer = document.querySelector("#headerCharactersContainer");
+const cardsCharactersContainer = document.querySelector("#cardsCharactersContainer");
+const locationsContainer = document.querySelector("#locationsList");
+const episodesContainer = document.querySelector("#episodesList");
 
 async function getAll() {
   const [responseChracter, responseLocations, responseEpisodes] = await Promise.all([
@@ -21,13 +23,8 @@ async function getAll() {
   // removing the loading
   loadingPage.classList.remove("loader"); 
   loadingPage.classList.add("hide"); 
-
-  const createDiv = document.createElement("div");
-  createDiv.innerHTML = `
-    <h2>Characters</h2>
-  `;
-  headerCharactersContainer.appendChild(createDiv);
   
+  //charactersCards
   dataCharacters.results.map((data) => {
 
     const divCharacterContainer = document.createElement("div");
@@ -41,7 +38,7 @@ async function getAll() {
       >
     </div>
     <div class="nameCharacterContainer">
-      <h3 class="nameCharacter">${data.name}</h3>
+      <h2 class="nameCharacter">${data.name}</h2>
     </div>
     <div class="dataContainer">
       <ul>
@@ -52,6 +49,32 @@ async function getAll() {
     `;
     cardsContainer.appendChild(divCharacterContainer);
   
+  });
+
+  //locations list
+  dataLocations.results.map((data) => {
+    const locationsList = document.createElement("ul");
+    locationsList.classList.add("locationsList");
+    
+    locationsList.innerHTML = `
+    <li><span>name: </span>${data.name}</li>
+    <li><span>type: </span>${data.type}</li>
+    <li><span>dimension: </span>${data.dimension}</li>
+    `
+    locationsContainer.appendChild(locationsList);
+  });
+
+  //episodes list
+  dataEpisodes.results.map((data) => {
+    const episodesList = document.createElement("ul");
+    episodesList.classList.add("episodesList");
+    
+    episodesList.innerHTML = `
+    <li><span>name: </span>${data.name}</li>
+    <li><span>date: </span>${data.air_date}</li>
+    <li><span>episode: </span>${data.episode}</li>
+    `
+    episodesContainer.appendChild(episodesList);
   });
 };
 

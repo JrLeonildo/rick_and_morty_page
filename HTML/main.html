@@ -10,7 +10,8 @@
 <body>
   <header>
     <div id="headerContainer">
-      <div>
+      <!--logo-->
+      <div id="logoContainer">
         <img 
           src="../imgs/logo.png" 
           alt="image of rick and morty" 
@@ -18,28 +19,49 @@
           title="logo do site"
         >
       </div>
-      <nav id="navButtons">
-        <div><a href="" class="open">characters</a></div>
-        <div><a href="">locations</a></div>
-        <div><a href="">episodes</a></div>
-      </nav>
+      <!--navbar-->
+      <div id="navbarContainer">
+        <nav id="navButtons">
+          <div><a href="" class="open">characters</a></div>
+          <div><a href="">locations</a></div>
+          <div><a href="">episodes</a></div>
+        </nav>
+      </div>
     </div>
   </header>
   
   <main id="main">
+    <!--loading-->
     <div class="loader">
       <div data-glitch="Loading..." class="glitch">Loading...</div>
-   </div>
-    <div id="charactersContainer">
-      <div id="headerCharactersContainer">
-        
-      </div>
-      <div id="cardsContainer">
+    </div>
 
+    <!--cards-->
+    <div id="cardsCharactersContainer">
+      <div class="headerContainer">
+        <h3>characters<h3>
       </div>
+      <div id="cardsContainer"></div>
+    </div>
+
+    <!--locations list-->
+    <div id="locationsListContainer">
+      <div class="headerContainer">
+        <h3>locations</h3>
+      </div>
+      <div id="locationsList"></div>
+    </div>
+
+    <!--episodes list-->
+    <div id="episodesListContainer">
+      <div class="headerContainer">
+        <h3>episodes</h3>
+      </div>
+      <div id="episodesList"></div>
     </div>
   </main>
 
+  <!--footer-->
   <footer>
 
   </footer>
