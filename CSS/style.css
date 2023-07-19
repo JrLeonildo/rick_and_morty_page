@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@772&display=swap');
+
+.textStyle{
+  font-family: 'Tektur', cursive;
+}
+.textColor{
+  color: #fff;
+}
 *{
   margin: 0;
   padding: 0;
@@ -8,9 +16,15 @@ body{
   background-color: #000000;
 }
 
-/*header*/
+/*navbar*/
 header{
   border-bottom: solid #ffffff79 1px;
+}
+#navbar{
+  background-color: #000000;
+}
+#container{
+  padding: 0;
 }
 #headerContainer{
   background-color: #000000;
@@ -19,19 +33,12 @@ header{
   align-items: center;
   padding:5px 30px;
 }
-
-/*navbar*/
-nav{
-  display: flex;
-}
-nav div{
-  padding-left: 15px;
-}
-nav div a{
+.nav-item a{
+  margin-left: 2em;
   text-decoration: none;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: bold;
+}
+.nav-item a:hover{
+  text-decoration: underline;
 }
 
 /*loading*/
@@ -51,7 +58,6 @@ nav div a{
   font-size: 25px;
   font-weight: 700;
   line-height: 1.2;
-  color: #fff;
   letter-spacing: 5px;
   z-index: 1;
   animation: shift 1s ease-in-out infinite alternate;
@@ -153,7 +159,6 @@ nav div a{
   flex-wrap: wrap;
 }
 .headerContainer h3{
-  color: #fff;
   text-align: center;
   margin-top: 20px;
   font-size: 2.3em;
@@ -173,7 +178,6 @@ nav div a{
   width: 200px;
 }
 .nameCharacterContainer h2{
-  color: #fff;
   text-align: center;
   font-size: 1.2em;
 }
@@ -185,9 +189,6 @@ nav div a{
   flex-direction: column;
   align-items: center;
   width: 100%;
-}
-.dataContainer ul li{
-  color: #fff;
 }
 
 /*locations episodes*/
@@ -204,10 +205,50 @@ nav div a{
   margin: 0.5em 2em;
 }
 .locationsList  li, .episodesList li{
-  color: #ffffff;
   margin: 0.5em 1em;
 }
 .locationsList li span, .episodesList li span{
   font-size: 1.1em;
   font-weight: bold;
+}
+
+/*footer*/
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#socialMediaContainer{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  width: 50%;
+}
+.socialMedia a{
+  text-decoration: none;
+}
+.socialMedia a:hover{
+  text-decoration: underline;
+}
+#return{
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+}
+#return a i{
+  font-size: 2em;
+}
+#return a i:hover{
+  font-size: 2.1em;
+}
+
+@media(max-width: 460px){
+  .locationsList, .episodesList{
+    margin: 0.5em 0;
+  }
+  .locationsList  li, .episodesList li{
+    margin: 0.5em;
+    font-size: 0.7em;
+  }
 }

@@ -38,12 +38,12 @@ async function getAll() {
       >
     </div>
     <div class="nameCharacterContainer">
-      <h2 class="nameCharacter">${data.name}</h2>
+      <h2 class="nameCharacter textColor">${data.name}</h2>
     </div>
     <div class="dataContainer">
       <ul>
-        <li>${data.species}</li> 
-        <li>${data.status}</li>
+        <li class="textColor">${data.species}</li> 
+        <li class="textColor">${data.status}</li>
       </ul>
     </div>
     `;
@@ -57,9 +57,9 @@ async function getAll() {
     locationsList.classList.add("locationsList");
     
     locationsList.innerHTML = `
-    <li><span>name: </span>${data.name}</li>
-    <li><span>type: </span>${data.type}</li>
-    <li><span>dimension: </span>${data.dimension}</li>
+    <li class="textColor"><span>name: </span>${data.name}</li>
+    <li class="textColor"><span>type: </span>${data.type}</li>
+    <li class="textColor"><span>dimension: </span>${data.dimension}</li>
     `
     locationsContainer.appendChild(locationsList);
   });
@@ -70,9 +70,9 @@ async function getAll() {
     episodesList.classList.add("episodesList");
     
     episodesList.innerHTML = `
-    <li><span>name: </span>${data.name}</li>
-    <li><span>date: </span>${data.air_date}</li>
-    <li><span>episode: </span>${data.episode}</li>
+    <li class="textColor"><span>name: </span>${data.name}</li>
+    <li class="textColor"><span>date: </span>${data.air_date}</li>
+    <li class="textColor"><span>episode: </span>${data.episode}</li>
     `
     episodesContainer.appendChild(episodesList);
   });

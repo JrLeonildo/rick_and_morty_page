@@ -3,31 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--css bootstrap-->
+   <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+    crossorigin="anonymous"
+  >
+  <!--bootstrap icons-->
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  >
+  <!--native css-->
   <link rel="stylesheet" href="../CSS/style.css">
+  <!--script bootstrap-->
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
+    crossorigin="anonymous"
+  ></script>
+  <!--native JS-->
   <script src="../JS/script.js" defer></script>
   <title>Rick and Morty project</title>
 </head>
 <body>
   <header>
-    <div id="headerContainer">
-      <!--logo-->
-      <div id="logoContainer">
-        <img 
-          src="../imgs/logo.png" 
-          alt="image of rick and morty" 
-          width="250px" 
-          title="logo do site"
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg bg-primary-color" id="navbar">
+      <div class="container " id="container">
+        <a href="#" class="navbar-brand">
+          <img src="../imgs/logo.png" alt="logo">
+        </a>
+        <button 
+          class="navbar-toggler textColor"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar-items"
+          aria-controls="navbar-items"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
+        <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-items">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="#cardsCharactersContainer" class="textStyle textColor">characters</a>
+            </li>
+            <li class="nav-item">
+              <a href="#locationsListContainer" class="textStyle textColor">locations</a>
+            </li>
+            <li class="nav-item">
+              <a href="#episodesListContainer" class="textStyle textColor">episodes</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <!--navbar-->
-      <div id="navbarContainer">
-        <nav id="navButtons">
-          <div><a href="" class="open">characters</a></div>
-          <div><a href="">locations</a></div>
-          <div><a href="">episodes</a></div>
-        </nav>
-      </div>
-    </div>
+    </nav>
   </header>
   
   <main id="main">
@@ -39,7 +72,7 @@
     <!--cards-->
     <div id="cardsCharactersContainer">
       <div class="headerContainer">
-        <h3>characters<h3>
+        <h3 class="textColor textStyle">characters<h3>
       </div>
       <div id="cardsContainer"></div>
     </div>
@@ -47,7 +80,7 @@
     <!--locations list-->
     <div id="locationsListContainer">
       <div class="headerContainer">
-        <h3>locations</h3>
+        <h3 class="textColor textStyle">locations</h3>
       </div>
       <div id="locationsList"></div>
     </div>
@@ -55,7 +88,7 @@
     <!--episodes list-->
     <div id="episodesListContainer">
       <div class="headerContainer">
-        <h3>episodes</h3>
+        <h3 class="textColor textStyle">episodes</h3>
       </div>
       <div id="episodesList"></div>
     </div>
@@ -63,7 +96,30 @@
 
   <!--footer-->
   <footer>
+    <div id="socialMediaContainer">
+      <div class="socialMedia">
+        <i class="bi bi-facebook textColor"></i>
+        <a href="#" class="textStyle textColor">facebook</a>
+      </div>
+      <div class="socialMedia">
+        <i class="bi bi-instagram textColor"></i>
+        <a href="#" class="textStyle textColor">instagram</a>
+      </div>
+      <div class="socialMedia">
+        <i class="bi bi-discord textColor"></i>
+        <a href="#" class="textStyle textColor">discord</a>
+      </div>
+      <div class="socialMedia">
+        <i class="bi bi-envelope-fill textColor"></i>
+        <a href="#" class="textStyle textColor">email</a>
+      </div>
+    </div>
 
+    <div id="return">
+      <a href="#navbar">
+        <i class="bi bi-arrow-up-circle textColor" title="return top"></i>
+      </a>
+    </div>
   </footer>
 </body>
 </html>
